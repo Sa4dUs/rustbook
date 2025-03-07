@@ -15,10 +15,10 @@ by having to go through the macro.
 It has the nice side-effect, that we can implement an erroring dummy fallback if 
 we see that the `llvm_enzyme` config hasn't been set when building rustc.
 
-`compiler/rustc_codegen_llvm/src/attributes.rs`: 
+<!-- `compiler/rustc_codegen_llvm/src/attributes.rs`: 
 In `from_fn_attrs` we query `cx.tcx.autodiff_attrs(instance.def_id());`
 and if we get an autodiff is active (that is a source or a placeholder). 
-This is to make sure that neither of the too gets inlined, for that we mark them as `InlineAttr::Never` and pray for the best.
+This is to make sure that neither of the too gets inlined, for that we mark them as `InlineAttr::Never` and pray for the best. -->
 
 `compiler/rustc_codegen_ssa/src/codegen_attrs.rs`
 We added `autodiff_attrs`, in which we parse `rustc_autodiff` attributes applied to Functions, and create `AutoDiffAttrs` out of it, which we return.

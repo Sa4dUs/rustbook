@@ -4,7 +4,7 @@ When using forward mode, we only have three choices of activity values, `Dual`, 
 Dual arguments get a second "shadow" variable.
 Usually we will only seed the shadow variable of one Dual input to one and all others to zero, 
 and then read the shadow values of our output arguments.
-We can also seed more then one input shadow, in which case the shadow of output variables will 
+We can also seed more than one input shadow, in which case the shadow of output variables will 
 be a linear combination based on the seed values.
 If we use a `&mut ` reference as input and output argument and mark it as Dual,
 the corresponding shadow seed might get overwritten. Otherwise, the seed value will remain unchanged.
